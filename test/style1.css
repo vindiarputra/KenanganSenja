@@ -1,0 +1,18 @@
+const stars = document.querySelectorAll(".star");
+const ratingText = document.getElementById("rating");
+
+stars.forEach(star => {
+  star.onclick = () => {
+    const starNumber = star.getAttribute("data-star");
+    
+    stars.forEach((s, index) => {
+      if (index < starNumber) {
+        s.textContent = "\u2605"; // filled star
+      } else {
+        s.textContent = "\u2606"; // empty star
+      }
+    });
+    
+    ratingText.textContent = `${starNumber} out of 5 stars`;
+  };
+});
