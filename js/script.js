@@ -142,6 +142,3 @@ stars.forEach((star) => {
     }
   });
 });
-
-
-
